@@ -1,0 +1,153 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</head>
+
+<!--   .......     -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                <img src="assets/images/india_flag.png" height="15" loading="lazy" />
+            </a>
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/catalog">Course Catelog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/aboutus'>About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/enrolledcourses" routerLinkActive="active" id="cart"><b>Enrolled Courses</b></a>
+                  </li>
+            </ul>
+            <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+            <!-- Icon -->
+            <a class="link-secondary me-3" href="#">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+
+            <!-- Notifications -->
+            <div class="dropdown">
+                <a class="link-secondary me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                    role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item" href="#">Some news</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Another news</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Avatar -->
+            <div class="dropdown">
+                <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+                    role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+                        alt="Black and White Portrait of a Man" loading="lazy" />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                    <li>
+                        <a class="dropdown-item" href="#">My profile</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+<br>
+<br>
+<div class="input-group">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+        aria-describedby="search-addon" [(ngModel)]="searchTxt" />
+    <button type="button" class="btn btn-outline-primary">search</button>
+</div>
+<br>
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Filter Courses 
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><button (click)="filterDropdown('finance')">Finance </button></li>
+      <li><button (click)="filterDropdown('management')" >Management</button></li>
+      <li><button (click)="filterDropdown('tech')">Technical</button></li>
+    </ul>
+
+    <div *ngfor="let item of filteredData" class="col">
+        <div class="card h-70 w-70">
+            <img [src]="item.courseImg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{item.courseHead}}</h5>
+                <p class="card-text">{{item.courseText}}</p>
+                <a class="btn btn-primary" [routerLink]="['/detail', item.id]">Enroll now</a>
+            </div>
+        </div>
+        
+    </div>
+  </div>
+  
+  <br>
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Sort Courses 
+    </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a rel="noopener" (click)="sortByRatingIncreaseToDecrease()">Low to high</a></li>
+      <li><a rel="noopener" (click)="sortByRatingDecreaseToIncrease()">High to low </a></li>
+  </ul>
+  </div>
+
+  <br>  
+
+
+<div class="row row-cols-1 row-cols-md-3 g-10" style="margin: 20px;">
+    <div *ngFor="let cor of searchedCourses" class="col">
+        <div class="card h-70 w-70">
+            <img [src]="cor.courseImg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{cor.courseHead}}</h5>
+                <p class="card-text">{{cor.courseText}}</p>
+                <p class="card-text"> Rating - {{cor.courseRating}}/5</p>
+                <a class="btn btn-primary" [routerLink]="['/detail', cor.id]">Enroll now</a>
+            </div>
+        </div>
+    </div>
+    
+</div>

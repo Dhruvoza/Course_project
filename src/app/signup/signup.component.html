@@ -1,0 +1,23 @@
+<body>
+    
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+      <h3><u>SIGN UP</u></h3>
+  
+      <label for="name">Name</label>
+      <input type="text" placeholder="Name" id="name" [(ngModel)]="userName" [ngModelOptions]="{standalone: true}"  required="true">
+  
+      <label for="username">Email</label>
+      <input type="email" placeholder="Email" id="username" [(ngModel)]="userEmail" [ngModelOptions]="{standalone: true}" required="true">
+      <p></p>
+  
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" [(ngModel)]="userPassword" [ngModelOptions]="{standalone: true}" required="true">
+  
+      <button id="login" type="submit">Sign Up</button>
+      <div id="signup">Already a User ? <a routerLink="/login" routerLinkActive="active">Login</a></div>
+    </form>
+  </body>

@@ -1,0 +1,237 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img
+          src="assets/images/india_flag.png"
+          height="15"
+          
+          loading="lazy"
+        />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/catalog">Course Catelog</a>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/aboutus'>About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/enrolledcourses" routerLinkActive="active" id="cart"><b>Enrolled Courses</b></a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <a class="link-secondary me-3" href="#">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+
+      <!-- Notifications -->
+      <div class="dropdown">
+        <a
+          class="link-secondary me-3 dropdown-toggle hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bell"></i>
+          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuLink"
+        >
+          <li>
+            <a class="dropdown-item" href="#">Some news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Another news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Avatar -->
+      <div class="dropdown">
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            class="rounded-circle"
+            height="25"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+          />
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuAvatar"
+        >
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+  
+  <br>
+<div class="container ">
+    <div class="row align-items-center">
+      <div class="col-4">
+        <div class="card" style="max-width: 18rem;">
+          <video src="https://codingyaar.com/wp-content/uploads/video-in-bootstrap-card.mp4" class="card-img-top" controls></video>
+  
+          <div class="card-body">
+            <h5 class="card-title">Your Course</h5>
+            <p class="card-text">All the course content is available to you</p>
+            <a href="#" class="btn btn-primary">See the preview</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <video src="https://codingyaar.com/wp-content/uploads/video-in-bootstrap-card.mp4" class="card-img-top" muted autoplay loop></video>
+  
+          <div class="card-body">
+            <h5 class="card-title">Your Course</h5>
+            <p class="card-text">ALl the Course Content is available to you</p>
+            <a href="#" class="btn btn-primary">Next Video</a>
+          </div>
+        </div>
+      </div>
+  
+      
+    </div>
+
+<br>
+
+<div class="review-container">
+    <h1>Course Outline</h1>
+</div>
+
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          WEEK 1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          WEEK 2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          WEEK 3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+<div class="review-container">
+    <h1>User Reviews</h1>
+    <div *ngFor="let review of reviews" class="review-item">
+      <h3>{{ review.username }}</h3>
+      <p>{{ review.reviewText }}</p>
+      <div class="rating">
+        <span class="star" [class.full]="review.rating >= 1" (click)="setRating(review, 1)"><i class="fas fa-star"></i></span>
+        <span class="star" [class.full]="review.rating >= 2" (click)="setRating(review, 2)"><i class="fas fa-star"></i></span>
+        <span class="star" [class.full]="review.rating >= 3" (click)="setRating(review, 3)"><i class="fas fa-star"></i></span>
+        <span class="star" [class.full]="review.rating >= 4" (click)="setRating(review, 4)"><i class="fas fa-star"></i></span>
+        <span class="star" [class.full]="review.rating === 5" (click)="setRating(review, 5)"><i class="fas fa-star"></i></span>
+      </div>
+    </div>
+  
+    <h2>Leave a Review</h2>
+    <form (ngSubmit)="addReview()">
+      <label for="username">Name:</label>
+      <input type="text" id="username" name="username" required [(ngModel)]="newReview.username">
+      <label for="review">Review:</label>
+      <textarea id="review" name="review" required [(ngModel)]="newReview.reviewText"></textarea>
+      <div class="rating">
+        <span class="star" [class.full]="newReview.rating >= 1" (click)="setRating(newReview, 1)"><i class="fas fa-star"></i></span>
+        <span class="star" [class.full]="newReview.rating >= 2" (click)="setRating(newReview, 2)"><i class="fas fa-star"></i></span>
+        <span class="star" [class.full]="newReview.rating >= 3" (click)="setRating(newReview, 3)"><i class="fas fa-star"></i></span>
+        <span class="star" [class.full]="newReview.rating >= 4" (click)="setRating(newReview, 4)"><i class="fas fa-star"></i></span>
+        <span class="star" [class.full]="newReview.rating === 5" (click)="setRating(newReview, 5)"><i class="fas fa-star"></i></span>
+      </div>
+      <button type="submit">Submit Review</button>
+    </form>
+  </div>
+
+
+    
+    
+    
+    
+    
+    
+  
+
+    

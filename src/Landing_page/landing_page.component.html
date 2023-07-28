@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <style>
+        #carousel{
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <!--   .......     -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+      
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+              <img
+                src="assets/images/india_flag.png"
+                height="15"
+                
+                loading="lazy"
+              />
+            </a>
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/catalog">Course Catelog</a>
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink='/aboutus'>About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/Home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/enrolledcourses" routerLinkActive="active" id="cart"><b>Enrolled Courses</b></a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+      
+          <!-- Right elements -->
+          <div class="d-flex align-items-center">
+            <!-- Icon -->
+            <a class="link-secondary me-3" routerLink="/login">
+              Login
+            </a>
+
+            <a class="link-secondary me-3" (click)="handleLogout()">
+              Logout
+            </a>
+      
+            <!-- Notifications -->
+            <div class="dropdown">
+              <a
+                class="link-secondary me-3 dropdown-toggle hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger">1</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">Some news</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another news</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+                
+              </ul>
+            </div>
+            <!-- Avatar -->
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuAvatar"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                  class="rounded-circle"
+                  height="25"
+                  alt="Black and White Portrait of a Man"
+                  loading="lazy"
+                />
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuAvatar"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">My profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Settings</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!--   .......     -->
+      <br>
+
+      <!-- background img-->
+      <div
+    class="bg-image p-5 text-center shadow-1-strong rounded mb-3 text-white"
+    style="background-image: url(assets/images/background_for_course.jpg); background-size: cover; height: 100%; width: 100%;"
+    >
+    <h1 class="mb-3 h2">Your Learning Starts Now</h1>
+
+    <p> 
+        Explore the new path for learning and Gain knowledge in your interested field with LearningCurve
+
+    </p>
+</div>
+
+<br>
+<!--Corousal-->
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img id="carousel" src="assets/images/finance_course.jpg" class="d-block w-100" >
+      </div>
+      <div class="carousel-item">
+        <img id="carousel" src="assets/images/tech_cor.jpg" class="d-block w-100" >
+      </div>
+      <div class="carousel-item">
+        <img id="carousel" src="assets/images/management_cor.jpg" class="d-block w-100" >
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<!--corousal end-->
+<br>
+
+<div class="row row-cols-1 row-cols-md-3 g-10" style="margin-left: 0%; margin-right: 0%;">
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/images/cloud.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Cloud Computing</h5>
+          <p class="card-text">Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user. Large clouds often have functions distributed over multiple locations, each of which is a data center.</p>
+          <a href="#" class="btn btn-primary">Enroll now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/images/blockchain.png" class="card-img-top" style="height: 100%; width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">Blockchain development</h5>
+          <p class="card-text">Blockchain development refers to building, maintaining, and designing blockchain applications and systems. Overall, it seeks to use the unique features of blockchain technology to solve problems and create opportunities. An example of innovative blockchain development is the smart contract.</p>
+          <a href="#" class="btn btn-primary">Enroll now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/images/ui_ux.jpg" class="card-img-top" style="height: 58%; width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">UI/UX development</h5>
+          <p class="card-text">UX design stands for user experience design, while UI design stands for user interface design. Both are important facets of the custom software development process, and both involve working closely with users to create interfaces that are both effective and easy to use.</p>
+          <a href="#" class="btn btn-primary">Enroll now</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>  
+    
+
+</body>
+</html>
